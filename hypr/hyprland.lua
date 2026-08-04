@@ -1,10 +1,11 @@
 -- Refer to the wiki for more information.
 -- https://wiki.hypr.land/Configuring/Start/
 
+local colors = require("config/colors")
 require("config/keybinds")
 require("config/window-workspace-rules")
 require("config/autostart")
-local colors = require("config/colors")
+require("config/plugins/hyprbars")
 
 ------------------
 ---- MONITORS ----
@@ -47,7 +48,7 @@ hl.env("XDG_MENU_PREFIX", "arch-")
 
 -- hl.permission("/usr/(bin|local/bin)/grim", "screencopy", "allow")
 -- hl.permission("/usr/(lib|libexec|lib64)/xdg-desktop-portal-hyprland", "screencopy", "allow")
--- hl.permission("/usr/(bin|local/bin)/hyprpm", "plugin", "allow")
+hl.permission("/usr/(bin|local/bin)/hyprpm", "plugin", "allow")
 
 
 -----------------------
