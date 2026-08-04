@@ -47,3 +47,9 @@ hl.window_rule({
     move  = "20 monitor_h-120",
     float = true,
 })
+
+hl.window_rule({
+    match = { class = "org.kde.dolphin" },
+    float = true,
+    size = {1000,1000}
+})

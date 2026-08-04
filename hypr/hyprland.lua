@@ -2,8 +2,7 @@
 -- https://wiki.hypr.land/Configuring/Start/
 
 require("config/keybinds")
-require("config/window-workspaces")
-require("config/window-rules")
+require("config/window-workspace-rules")
 require("config/autostart")
 local colors = require("config/colors")
 
