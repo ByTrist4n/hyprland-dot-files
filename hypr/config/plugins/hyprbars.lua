@@ -11,8 +11,7 @@ hl.config({
     hyprbars = {
       bar_height                 = 24,
       bar_color                  = colors.color2,
-      bar_text_font              = "JetBrainsMono Nerd Font",
-      bar_text_size              = 15,
+      bar_title_enabled          = false,
       bar_precedence_over_border = true,
       bar_buttons_alignment      = "left",
       bar_button_padding         = 5,
