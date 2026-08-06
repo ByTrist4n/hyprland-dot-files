@@ -21,6 +21,8 @@ hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("loginctl lock-session"))
 hl.bind(mainMod .. " + ALT + L", hl.dsp.exec_cmd("loginctl lock-session && sleep 2 && systemctl suspend"))
 hl.bind(mainMod .. " + SHIFT + T", hl.dsp.exec_cmd("sh ~/.config/theme-sw1tcher/theme-sw1tcher.sh"))
 hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd("rofimoji -a copy"))
+hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("sh ~/.config/hypr/scripts/record-menu.sh"))
+
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
