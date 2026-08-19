@@ -5,7 +5,6 @@ local colors = require("config/colors")
 require("config/keybinds")
 require("config/window-workspace-rules")
 require("config/autostart")
-require("config/plugins/hyprbars")
 
 ------------------
 ---- MONITORS ----
