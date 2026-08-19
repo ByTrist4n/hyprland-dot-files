@@ -9,9 +9,9 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(globalVariables.terminal))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
-hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+hl.bind(mainMod .. " + SHIFT + DELETE", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(globalVariables.fileManager))
-hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + V", hl.dsp.window.float({ mode = "maximized", action = "toggle" }))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(globalVariables.menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
@@ -22,7 +22,9 @@ hl.bind(mainMod .. " + ALT + L", hl.dsp.exec_cmd("loginctl lock-session && sleep
 hl.bind(mainMod .. " + SHIFT + T", hl.dsp.exec_cmd("sh ~/.config/theme-sw1tcher/theme-sw1tcher.sh"))
 hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd("rofimoji -a copy"))
 hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("sh ~/.config/hypr/scripts/record-menu.sh"))
-
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized"}))
+hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen())
+ 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
