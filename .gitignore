@@ -16,6 +16,8 @@
 !fastfetch/**
 !$HOME/
 !$HOME/**
+!quickshell/
+!quickshell/**
 
 # --- Global security ---
 *.key
