@@ -1,5 +1,5 @@
-import "./modules" as Modules
-import "./theme" as Theme
+import "./components/bar"
+import "./theme"
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
@@ -26,7 +26,7 @@ ShellRoot {
             anchors.right: parent.right
             anchors.margins: 8
             implicitHeight: barRow.implicitHeight + 16
-            color: Theme.Color.bgBase
+            color: Color.bgBase
             radius: 8
 
             RowLayout {
@@ -39,7 +39,10 @@ ShellRoot {
                 anchors.rightMargin: 8
                 spacing: 8
 
-                Modules.Workspaces {
+                BarWorkspaces {
+                }
+
+                BarMusic {
                 }
 
                 Item {
@@ -48,7 +51,7 @@ ShellRoot {
 
             }
 
-            Modules.DateFull {
+            BarDate {
                 anchors.centerIn: parent
             }
 

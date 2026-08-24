@@ -1,5 +1,5 @@
-import "../modules" as Modules
-import "../theme" as Theme
+import "../../components/widget"
+import "../../theme"
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
@@ -12,9 +12,9 @@ Rectangle {
     anchors.centerIn: parent
     implicitHeight: 30
     implicitWidth: clockLayout.implicitWidth + 16
-    color: clockMouseArea.containsMouse ? Theme.Color.bgSurfaceHover : "transparent"
+    color: clockMouseArea.containsMouse ? Color.bgSurfaceHover : "transparent"
     radius: 6
-    border.color: Theme.Color.borderBase
+    border.color: Color.borderBase
     border.width: 1
 
     RowLayout {
@@ -25,7 +25,7 @@ Rectangle {
 
         Text {
             text: "󰃭"
-            color: Theme.Color.accentPrimary
+            color: Color.accentPrimary
             font.pixelSize: 13
         }
 
@@ -33,7 +33,7 @@ Rectangle {
             id: clockText
 
             text: clockTimer.timeString
-            color: Theme.Color.fgPrimary
+            color: Color.fgPrimary
             font.pixelSize: 14
             font.bold: true
         }
@@ -65,7 +65,7 @@ Rectangle {
         }
     }
 
-    Modules.Calendar {
+    Calendar {
         id: calendarPopup
 
         targetItem: clockPill

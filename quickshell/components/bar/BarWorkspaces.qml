@@ -1,4 +1,4 @@
-import "../theme" as Theme
+import "../../theme"
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
@@ -57,7 +57,7 @@ Rectangle {
     implicitHeight: 30
     color: "transparent"
     radius: 6
-    border.color: Theme.Color.borderBase
+    border.color: Color.borderBase
     border.width: 1
 
     RowLayout {
@@ -126,7 +126,7 @@ Rectangle {
                     implicitWidth: wsContentLayout.implicitWidth + 12
                     implicitHeight: 22
                     radius: 4
-                    color: isActive ? Theme.Color.bgSurfaceActive : "transparent"
+                    color: isActive ? Color.bgSurfaceActive : "transparent"
 
                     RowLayout {
                         id: wsContentLayout
@@ -136,7 +136,7 @@ Rectangle {
 
                         Text {
                             text: wsDelegate.wsInfo.name
-                            color: wsDelegate.isActive ? Theme.Color.accentPrimary : Theme.Color.fgPrimary
+                            color: wsDelegate.isActive ? Color.accentPrimary : Color.fgPrimary
                             font.pixelSize: 14
                             font.bold: wsDelegate.isActive
                             Layout.alignment: Qt.AlignVCenter
@@ -155,7 +155,7 @@ Rectangle {
                                     required property var modelData
 
                                     text: root.getWindowIcon(modelData)
-                                    color: wsDelegate.isActive ? Theme.Color.accentPrimary : Theme.Color.fgPrimary
+                                    color: wsDelegate.isActive ? Color.accentPrimary : Color.fgPrimary
                                     font.pixelSize: 16
                                 }
 

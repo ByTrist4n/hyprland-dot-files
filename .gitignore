@@ -18,6 +18,8 @@
 !$HOME/**
 !quickshell/
 !quickshell/**
+!cava/
+!cava/quickshell_config
 
 # --- Global security ---
 *.key

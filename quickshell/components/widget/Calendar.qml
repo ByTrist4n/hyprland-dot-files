@@ -1,4 +1,4 @@
-import "../theme" as Theme
+import "../../theme"
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
@@ -27,8 +27,8 @@ PopupWindow {
 
         implicitWidth: mainLayout.implicitWidth + 24
         implicitHeight: mainLayout.implicitHeight + 24
-        color: Theme.Color.bgBase
-        border.color: Theme.Color.borderBase
+        color: Color.bgBase
+        border.color: Color.borderBase
         border.width: 1
         radius: 8
 
@@ -42,7 +42,7 @@ PopupWindow {
             Text {
                 Layout.alignment: Qt.AlignHCenter
                 text: Qt.formatDateTime(new Date(), "MMMM yyyy")
-                color: Theme.Color.fgPrimary
+                color: Color.fgPrimary
                 font.bold: true
             }
 
@@ -71,12 +71,12 @@ PopupWindow {
                         width: 24
                         height: 24
                         radius: 4
-                        color: modelData === new Date().getDate() ? Theme.Color.urgent : "transparent"
+                        color: modelData === new Date().getDate() ? Color.urgent : "transparent"
 
                         Text {
                             anchors.centerIn: parent
                             text: modelData
-                            color: modelData === new Date().getDate() ? Theme.Color.fgOnAccent : Theme.Color.fgPrimary
+                            color: modelData === new Date().getDate() ? Color.fgOnAccent : Color.fgPrimary
                             font.bold: modelData === new Date().getDate()
                         }
 
