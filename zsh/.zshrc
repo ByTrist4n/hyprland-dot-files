@@ -68,9 +68,15 @@ HL_ERR_MODE='on'
 
 # --- User configuration ---
 
-# Aliases
+# -- Aliases --
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
+# Standard grid view with icons
+alias ls='eza --icons --group-directories-first'
+# Detailed list view
+alias ll='eza -la --icons --octal-permissions --group-directories-first --time-style=long-iso'
+# Tree view with git status and depth restriction
+alias tree='eza --tree --icons --level=2'
 
 # Atuin plugin configuration
 eval "$(atuin init zsh)"
