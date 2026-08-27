@@ -1,0 +1,12 @@
+# Display in full modal overlay
+style = "full"
+
+# Show selected command details at the bottom with high visibility
+show_preview = true
+preview_height = 4
+
+# Keep bottom interface clean
+show_help = false
+
+# Enable fuzzy searching
+search_mode = "fuzzy"

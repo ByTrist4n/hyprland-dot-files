@@ -18,6 +18,8 @@
 !quickshell/**
 !zsh/
 !zsh/.zshrc
+!atuin/
+!atuin/** 
 
 # --- Global security ---
 *.key
