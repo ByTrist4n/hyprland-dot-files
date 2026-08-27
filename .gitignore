@@ -14,10 +14,10 @@
 !rofi/**
 !fastfetch/
 !fastfetch/**
-!$HOME/
-!$HOME/**
 !quickshell/
 !quickshell/**
+!zsh/
+!zsh/.zshrc
 
 # --- Global security ---
 *.key
