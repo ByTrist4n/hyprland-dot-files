@@ -26,14 +26,9 @@ source $ZSH/oh-my-zsh.sh
 HL_SEP_MODE='on'
 HL_INFO_MODE='auto'
 HL_OVERWRITE='on'
-HL_SEP=(
-  _PRE  '┍' # consider '┌' or '╭'
-  _LINE '━' # consider '─'
-  _POST '┑' # consider '┐' or '╮'
-)
 HL_LAYOUT_STYLE="%{$light_black%}"
 HL_LAYOUT_TEMPLATE=(
-  _PRE    "│${IS_SSH+ %{$reset$faint%\}ssh}" # shows " ssh" if this is an SSH session
+  _PRE    "${IS_SSH+ %{$reset$faint%\}ssh}" # shows " ssh" if this is an SSH session
   USER    ' ...'
   HOST    " %{$reset$faint%}at%{$reset$HL_LAYOUT_STYLE%} ..."
   VENV    " %{$reset$faint%}with%{$reset$HL_LAYOUT_STYLE%} ..."
@@ -41,7 +36,7 @@ HL_LAYOUT_TEMPLATE=(
   _SPACER ''
   BRANCH  " %{$reset$faint%}on%{$reset$HL_LAYOUT_STYLE%} ..."
   STATUS  ' ...'
-  _POST   ' │'
+  _POST   ''
 )
 HL_LAYOUT_FIRST=(
   HOST    ' ...'
@@ -61,9 +56,9 @@ HL_CONTENT_TEMPLATE=(
 HL_GIT_SEP_SYMBOL=''
 HL_GIT_STATUS_SYMBOLS[CONFLICTS]="%{$red%}✘"
 HL_GIT_STATUS_SYMBOLS[CLEAN]="%{$green%}✔"
-HL_PROMPT="%{$HL_LAYOUT_STYLE%}╯ %{$reset%}$ "
+HL_PROMPT="%{$HL_LAYOUT_STYLE%} %{$reset%}$ "
 HL_CLOCK_MODE='on'
-HL_CLOCK_TEMPLATE="%{$faint%} ... %{$reset$HL_LAYOUT_STYLE%}╰"
+HL_CLOCK_TEMPLATE="%{$faint%} ... %{$reset$HL_LAYOUT_STYLE%}"
 HL_ERR_MODE='on'
 
 # --- User configuration ---
