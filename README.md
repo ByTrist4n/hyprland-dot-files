@@ -2,7 +2,7 @@
 
 [![](https://img.shields.io/github/last-commit/ByTrist4n/hyprland-dot-files?&style=for-the-badge&labelColor=252733)](https://github.com/ByTrist4n/Hyprland-dot-files)
 [![](https://img.shields.io/github/repo-size/ByTrist4n/hyprland-dot-files?color=%23DDB&label=SIZE&logo=codesandbox&style=for-the-badge&logoColor=D9E0EE&labelColor=252733)](https://github.com/ByTrist4n/Hyprland-dot-files)
-[![Hyprland](https://img.shields.io/badge/Hyprland-+0.56-blue?style=for-the-badge&labelColor=252733&logo=hyprland)](https://hypr.land)
+[![Hyprland](https://img.shields.io/badge/Hyprland-v0.55+-blue?style=for-the-badge&labelColor=252733&logo=hyprland)](https://hypr.land)
 
 # About
 
