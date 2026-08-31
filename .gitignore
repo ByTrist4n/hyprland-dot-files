@@ -14,10 +14,12 @@
 !rofi/**
 !fastfetch/
 !fastfetch/**
-!$HOME/
-!$HOME/**
 !quickshell/
 !quickshell/**
+!zsh/
+!zsh/.zshrc
+!atuin/
+!atuin/** 
 
 # --- Global security ---
 *.key
