@@ -66,7 +66,7 @@ PanelWindow {
         width: 360
         height: content.implicitHeight + 28
         radius: 12
-        color: Color.bgSurface
+        color: Color.bgBase
         border.width: 1
         border.color: Color.borderBase
 
