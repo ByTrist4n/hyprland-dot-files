@@ -31,9 +31,6 @@ ShellRoot {
         Rectangle {
             id: barContainer
 
-            Component.onCompleted: {
-                console.log("barRow implicitHeight:", barRow.implicitHeight);
-            }
             anchors.fill: parent
             implicitHeight: barRow.implicitHeight + 16
             color: Color.bgBase

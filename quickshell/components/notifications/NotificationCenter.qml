@@ -42,7 +42,7 @@ Scope {
 
             Rectangle {
                 anchors.fill: parent
-                radius: 16
+                radius: 12
                 color: Color.bgBase
                 border.width: 1
                 border.color: Color.borderBase

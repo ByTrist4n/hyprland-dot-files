@@ -65,7 +65,7 @@ PanelWindow {
         z: 1
         width: 360
         height: content.implicitHeight + 28
-        radius: 16
+        radius: 12
         color: Color.bgSurface
         border.width: 1
         border.color: Color.borderBase
@@ -159,7 +159,7 @@ PanelWindow {
                     visible: modelData.known
                     width: wifiList.width
                     height: visible ? 46 : 0
-                    radius: 9
+                    radius: 8
                     color: modelData.connected ? Color.bgSurfaceActive : wifiMouse.containsMouse ? Color.bgSurfaceHover : Color.bgBase
 
                     RowLayout {
@@ -251,7 +251,7 @@ PanelWindow {
                     Rectangle {
                         width: 18
                         height: 18
-                        radius: 9
+                        radius: 8
                         anchors.verticalCenter: parent.verticalCenter
                         x: root.bluetoothAdapter && root.bluetoothAdapter.enabled ? parent.width - width - 3 : 3
                         color: Color.fgPrimary
@@ -306,7 +306,7 @@ PanelWindow {
                     visible: modelData.paired
                     width: bluetoothList.width
                     height: visible ? 46 : 0
-                    radius: 9
+                    radius: 8
                     color: modelData.connected ? Color.bgSurfaceActive : bluetoothMouse.containsMouse ? Color.bgSurfaceHover : Color.bgBase
 
                     Connections {
