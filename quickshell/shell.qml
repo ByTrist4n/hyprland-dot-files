@@ -1,10 +1,12 @@
 import "./components/bars"
+import "./components/notifications"
 import "./theme"
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import Quickshell
 import Quickshell.Hyprland
+import Quickshell.Services.Notifications
 
 ShellRoot {
     PanelWindow {
@@ -52,11 +54,47 @@ ShellRoot {
             }
 
             BarDate {
+                id: barDate
+
                 anchors.centerIn: parent
+            }
+
+            BarNotification {
+                id: barNotification
+
+                anchors.left: barDate.right
+                anchors.leftMargin: 8
+                anchors.verticalCenter: barDate.verticalCenter
+                notificationManager: notificationManager
+                notificationCenter: notificationCenter
             }
 
         }
 
+    }
+
+    NotificationServer {
+        id: server
+
+        bodySupported: true
+        bodyMarkupSupported: false
+        actionsSupported: true
+    }
+
+    NotificationManager {
+        id: notificationManager
+
+        server: server
+    }
+
+    NotificationPopup {
+        manager: notificationManager
+    }
+
+    NotificationCenter {
+        id: notificationCenter
+
+        manager: notificationManager
     }
 
 }
