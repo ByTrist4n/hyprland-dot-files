@@ -1,4 +1,4 @@
-import "../widget"
+import "../widgets"
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts

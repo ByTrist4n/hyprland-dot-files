@@ -1,4 +1,4 @@
-import "./components/bar"
+import "./components/bars"
 import "./theme"
 import QtQuick
 import QtQuick.Controls

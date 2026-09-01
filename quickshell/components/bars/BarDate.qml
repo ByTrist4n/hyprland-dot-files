@@ -1,4 +1,4 @@
-import "../../components/widget"
+import "../../components/widgets"
 import "../../theme"
 import QtQuick
 import QtQuick.Controls
