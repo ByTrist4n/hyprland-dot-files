@@ -2,8 +2,6 @@
 *
 !README.md
 !.gitignore
-!waybar/
-!waybar/**
 !hypr/
 !hypr/**
 !wlogout/
