@@ -8,7 +8,6 @@ mkdir -p "$VIDEOS_DIR"
 if pgrep -x "wf-recorder" > /dev/null; then
     killall -INT wf-recorder
     notify-send "Screen Recorder" "Recording stopped" -i video-x-generic
-    pkill -RTMIN+8 waybar 2>/dev/null
     exit 0
 fi
 
@@ -40,5 +39,4 @@ if [ -n "$GEOM" ] && [ "$GEOM" != "null" ]; then
     wf-recorder -g "$GEOM" -f "$OUTPUT_FILE" &
     notify-send "Screen Recorder" "Recording started..." -i video-x-generic
     sleep 0.5
-    pkill -RTMIN+8 waybar 2>/dev/null
 fi
