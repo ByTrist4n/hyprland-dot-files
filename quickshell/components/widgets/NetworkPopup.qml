@@ -90,7 +90,7 @@ PanelWindow {
                 Text {
                     text: "Network"
                     color: Color.fgPrimary
-                    font.pixelSize: 18
+                    font.pixelSize: ThemeFont.lg
                     font.bold: true
                     Layout.fillWidth: true
                 }
@@ -105,7 +105,7 @@ PanelWindow {
                         anchors.centerIn: parent
                         text: "×"
                         color: Color.fgMuted
-                        font.pixelSize: 20
+                        font.pixelSize: ThemeFont.lg
                     }
 
                     MouseArea {
@@ -132,7 +132,7 @@ PanelWindow {
             Text {
                 text: "Wi-Fi"
                 color: Color.accentPrimary
-                font.pixelSize: 14
+                font.pixelSize: ThemeFont.sm
                 font.bold: true
             }
 
@@ -140,7 +140,7 @@ PanelWindow {
                 visible: root.wifiDevice === null
                 text: "No Wi-Fi adapter"
                 color: Color.fgMuted
-                font.pixelSize: 12
+                font.pixelSize: ThemeFont.xs
             }
 
             ListView {
@@ -171,13 +171,13 @@ PanelWindow {
                         Text {
                             text: modelData.connected ? "󰖩" : "󱚵"
                             color: modelData.connected ? Color.accentPrimary : Color.fgMuted
-                            font.pixelSize: 18
+                            font.pixelSize: ThemeFont.lg
                         }
 
                         Text {
                             text: modelData.name
                             color: Color.fgPrimary
-                            font.pixelSize: 13
+                            font.pixelSize: ThemeFont.sm
                             elide: Text.ElideRight
                             Layout.fillWidth: true
                         }
@@ -186,7 +186,7 @@ PanelWindow {
                             visible: modelData.connected
                             text: "✓"
                             color: Color.success
-                            font.pixelSize: 14
+                            font.pixelSize: ThemeFont.sm
                             font.bold: true
                         }
 
@@ -194,7 +194,7 @@ PanelWindow {
                             visible: modelData.stateChanging
                             text: "…"
                             color: Color.accentPrimary
-                            font.pixelSize: 16
+                            font.pixelSize: ThemeFont.md
                         }
 
                     }
@@ -233,7 +233,7 @@ PanelWindow {
                 Text {
                     text: "Bluetooth"
                     color: Color.accentSecondary
-                    font.pixelSize: 14
+                    font.pixelSize: ThemeFont.sm
                     font.bold: true
                     Layout.fillWidth: true
                 }
@@ -326,13 +326,13 @@ PanelWindow {
                         Text {
                             text: "󰂱"
                             color: modelData.connected ? Color.accentSecondary : Color.fgMuted
-                            font.pixelSize: 18
+                            font.pixelSize: ThemeFont.lg
                         }
 
                         Text {
                             text: modelData.name || "Unknown device"
                             color: Color.fgPrimary
-                            font.pixelSize: 13
+                            font.pixelSize: ThemeFont.sm
                             elide: Text.ElideRight
                             Layout.fillWidth: true
                         }
@@ -340,14 +340,14 @@ PanelWindow {
                         Text {
                             text: busy || modelData.connecting ? "Loading…" : ""
                             color: Color.accentSecondary
-                            font.pixelSize: 16
+                            font.pixelSize: ThemeFont.md
                         }
 
                         Text {
                             visible: !busy && !modelData.connecting
                             text: modelData.connected ? "✓" : "›"
                             color: modelData.connected ? Color.success : Color.fgMuted
-                            font.pixelSize: 16
+                            font.pixelSize: ThemeFont.md
                             font.bold: true
                         }
 
@@ -380,7 +380,7 @@ PanelWindow {
                 visible: root.bluetoothAdapter !== null && root.bluetoothAdapter.enabled && bluetoothList.count === 0
                 text: "No paired devices"
                 color: Color.fgMuted
-                font.pixelSize: 12
+                font.pixelSize: ThemeFont.xs
                 Layout.leftMargin: 4
             }
 
@@ -411,13 +411,13 @@ PanelWindow {
                         Text {
                             text: "󰛳"
                             color: Color.accentPrimary
-                            font.pixelSize: 14
+                            font.pixelSize: ThemeFont.sm
                         }
 
                         Text {
                             text: "Network settings"
                             color: Color.fgPrimary
-                            font.pixelSize: 12
+                            font.pixelSize: ThemeFont.xs
                         }
 
                     }
@@ -451,13 +451,13 @@ PanelWindow {
                         Text {
                             text: "󰂰"
                             color: Color.accentSecondary
-                            font.pixelSize: 14
+                            font.pixelSize: ThemeFont.sm
                         }
 
                         Text {
                             text: "Bluetooth settings"
                             color: Color.fgPrimary
-                            font.pixelSize: 12
+                            font.pixelSize: ThemeFont.xs
                         }
 
                     }

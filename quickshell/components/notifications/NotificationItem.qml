@@ -50,7 +50,7 @@ Item {
                         anchors.centerIn: parent
                         text: root.notification.appName ? root.notification.appName.charAt(0).toUpperCase() : "!"
                         color: Color.fgOnAccent
-                        font.pixelSize: 16
+                        font.pixelSize: ThemeFont.md
                         font.bold: true
                     }
 
@@ -64,7 +64,7 @@ Item {
                         Layout.fillWidth: true
                         text: root.notification.summary || "Notification"
                         color: Color.accentPrimary
-                        font.pixelSize: 14
+                        font.pixelSize: ThemeFont.sm
                         font.bold: true
                         maximumLineCount: 2
                         wrapMode: Text.Wrap
@@ -75,7 +75,7 @@ Item {
                         Layout.fillWidth: true
                         text: root.notification.body || ""
                         color: Color.fgPrimary
-                        font.pixelSize: 13
+                        font.pixelSize: ThemeFont.sm
                         wrapMode: Text.Wrap
                         maximumLineCount: 4
                         elide: Text.ElideRight
@@ -85,7 +85,7 @@ Item {
                         Layout.fillWidth: true
                         text: root.notification.appName || ""
                         color: Color.fgPrimary
-                        font.pixelSize: 11
+                        font.pixelSize: ThemeFont.xs
                         maximumLineCount: 1
                         elide: Text.ElideRight
                     }
@@ -103,7 +103,7 @@ Item {
                         anchors.centerIn: parent
                         text: "×"
                         color: Color.fgPrimary
-                        font.pixelSize: 18
+                        font.pixelSize: ThemeFont.lg
                     }
 
                     MouseArea {
@@ -141,7 +141,7 @@ Item {
                             anchors.centerIn: parent
                             text: modelData.text || modelData.label || modelData.id || "Action"
                             color: Color.fgPrimary
-                            font.pixelSize: 12
+                            font.pixelSize: ThemeFont.xs
                             elide: Text.ElideRight
                         }
 

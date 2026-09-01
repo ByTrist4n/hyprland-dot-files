@@ -11,17 +11,17 @@ Rectangle {
 
     implicitWidth: 36
     implicitHeight: 36
-    radius: 10
+    radius: 8
     color: {
-        if (notificationMouse.pressed)
+        if (notificationMouseArea.pressed)
             return Color.bgSurfaceHover;
 
-        if (notificationMouse.containsMouse)
+        if (notificationMouseArea.containsMouse)
             return Color.bgSurface;
 
         return "transparent";
     }
-    border.width: notificationMouse.containsMouse ? 1 : 0
+    border.width: notificationMouseArea.containsMouse ? 1 : 0
     border.color: Color.borderBase
 
     Text {
@@ -29,7 +29,7 @@ Rectangle {
         // TODO: Do not disturb mode
         text: false ? "󰪑" : "󰂜"
         color: notificationManager.notifications.length > 0 ? Color.accentPrimary : Color.fgPrimary
-        font.pixelSize: 18
+        font.pixelSize: ThemeFont.lg
 
         Behavior on color {
             ColorAnimation {
@@ -58,14 +58,14 @@ Rectangle {
             anchors.centerIn: parent
             text: notificationManager.notifications.length > 99 ? "99+" : notificationManager.notifications.length
             color: Color.bgBase
-            font.pixelSize: 9
+            font.pixelSize: ThemeFont.xs
             font.bold: true
         }
 
     }
 
     MouseArea {
-        id: notificationMouse
+        id: notificationMouseArea
 
         anchors.fill: parent
         hoverEnabled: true

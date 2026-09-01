@@ -7,33 +7,35 @@ Rectangle {
 
     required property var networkPopup
 
-    implicitWidth: 78
-    implicitHeight: 36
+    implicitWidth: networkRow.implicitWidth + 24
+    implicitHeight: networkRow.implicitHeight + 16
     radius: 10
-    color: mouse.containsMouse ? Color.bgSurface : "transparent"
-    border.width: mouse.containsMouse ? 1 : 0
+    color: networkMouseArea.containsMouse ? Color.bgSurfaceHover : Color.bgSurface
+    border.width: 1
     border.color: Color.borderBase
 
     RowLayout {
+        id: networkRow
+
         anchors.centerIn: parent
         spacing: 8
 
         Text {
             text: networkPopup.wifiDevice && networkPopup.wifiDevice.connected ? "󰖩" : "󱚵"
             color: Color.accentPrimary
-            font.pixelSize: 18
+            font.pixelSize: ThemeFont.lg
         }
 
         Text {
             text: networkPopup.bluetoothAdapter && networkPopup.bluetoothAdapter.enabled ? "󰂯" : "󰂲"
             color: networkPopup.bluetoothAdapter && networkPopup.bluetoothAdapter.enabled ? Color.accentSecondary : Color.fgMuted
-            font.pixelSize: 18
+            font.pixelSize: ThemeFont.lg
         }
 
     }
 
     MouseArea {
-        id: mouse
+        id: networkMouseArea
 
         anchors.fill: parent
         hoverEnabled: true

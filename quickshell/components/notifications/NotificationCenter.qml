@@ -71,7 +71,7 @@ Scope {
                                 Layout.fillWidth: true
                                 text: "Notifications"
                                 color: Color.fgPrimary
-                                font.pixelSize: 18
+                                font.pixelSize: ThemeFont.lg
                                 font.bold: true
                             }
 
@@ -79,7 +79,7 @@ Scope {
                                 visible: manager.notifications.length > 0
                                 text: manager.notifications.length
                                 color: Color.fgPrimary
-                                font.pixelSize: 13
+                                font.pixelSize: ThemeFont.sm
                             }
 
                             Rectangle {
@@ -92,7 +92,7 @@ Scope {
                                     anchors.centerIn: parent
                                     text: "󰃢"
                                     color: Color.fgPrimary
-                                    font.pixelSize: 19
+                                    font.pixelSize: ThemeFont.lg
                                 }
 
                                 MouseArea {
@@ -126,7 +126,7 @@ Scope {
                             anchors.centerIn: parent
                             text: "Aucune notification"
                             color: Color.fgMuted
-                            font.pixelSize: 14
+                            font.pixelSize: ThemeFont.sm
                         }
 
                     }

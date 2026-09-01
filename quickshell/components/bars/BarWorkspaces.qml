@@ -54,9 +54,9 @@ Rectangle {
     }
 
     implicitWidth: wsRow.implicitWidth + 16
-    implicitHeight: 30
-    color: "transparent"
-    radius: 6
+    implicitHeight: wsRow.implicitHeight + 16
+    color: Color.bgSurface
+    radius: 8
     border.color: Color.borderBase
     border.width: 1
 
@@ -137,7 +137,7 @@ Rectangle {
                         Text {
                             text: wsDelegate.wsInfo.name
                             color: wsDelegate.isActive ? Color.accentPrimary : Color.fgPrimary
-                            font.pixelSize: 14
+                            font.pixelSize: ThemeFont.sm
                             font.bold: wsDelegate.isActive
                             Layout.alignment: Qt.AlignVCenter
                         }
@@ -156,7 +156,7 @@ Rectangle {
 
                                     text: root.getWindowIcon(modelData)
                                     color: wsDelegate.isActive ? Color.accentPrimary : Color.fgPrimary
-                                    font.pixelSize: 16
+                                    font.pixelSize: ThemeFont.md
                                 }
 
                             }

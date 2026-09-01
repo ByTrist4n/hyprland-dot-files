@@ -1,3 +1,4 @@
+import "../../theme"
 import "../widgets"
 import QtQuick
 import QtQuick.Controls
@@ -11,11 +12,11 @@ Rectangle {
     // Fetch the active MPRIS player or fallback to first available
     property MprisPlayer activePlayer: Mpris.players.values.length > 0 ? Mpris.players.values[0] : null
 
-    implicitWidth: musicRow.implicitWidth + 32
+    implicitWidth: musicRow.implicitWidth + 16
     implicitHeight: musicRow.implicitHeight + 16
-    color: "#1e1e2e"
-    radius: 12
-    border.color: "#313244"
+    color: Color.bgSurface
+    radius: 8
+    border.color: Color.borderBase
     border.width: 1
 
     RowLayout {
@@ -27,8 +28,8 @@ Rectangle {
         // Track Title
         Text {
             text: root.activePlayer && root.activePlayer.trackTitle ? root.activePlayer.trackTitle : "No media playing"
-            color: "#cdd6f4"
-            font.pixelSize: 14
+            color: Color.fgPrimary
+            font.pixelSize: ThemeFont.sm
             font.bold: true
             elide: Text.ElideRight
         }
@@ -36,8 +37,8 @@ Rectangle {
         // Artist Name
         Text {
             text: "- " + (root.activePlayer && root.activePlayer.trackArtist ? root.activePlayer.trackArtist : "Unknown artist")
-            color: "#a6adc8"
-            font.pixelSize: 12
+            color: Color.fgMuted
+            font.pixelSize: ThemeFont.xs
             elide: Text.ElideRight
         }
 

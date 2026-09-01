@@ -42,7 +42,7 @@ Rectangle {
                 anchors.centerIn: parent
                 text: "󰎈"
                 font.family: "JetBrainsMono Nerd Font"
-                font.pixelSize: 32
+                font.pixelSize: ThemeFont.lg
                 color: "#6c7086"
                 visible: !root.activePlayer || !root.activePlayer.trackArtUrl
             }
@@ -60,7 +60,7 @@ Rectangle {
                 Layout.fillWidth: true
                 text: root.activePlayer && root.activePlayer.trackTitle ? root.activePlayer.trackTitle : "No media playing"
                 color: "#cdd6f4"
-                font.pixelSize: 14
+                font.pixelSize: ThemeFont.sm
                 font.bold: true
                 elide: Text.ElideRight
             }
@@ -70,7 +70,7 @@ Rectangle {
                 Layout.fillWidth: true
                 text: root.activePlayer && root.activePlayer.trackArtist ? root.activePlayer.trackArtist : "Unknown artist"
                 color: "#a6adc8"
-                font.pixelSize: 12
+                font.pixelSize: ThemeFont.xs
                 elide: Text.ElideRight
             }
 
@@ -87,7 +87,7 @@ Rectangle {
                     contentItem: Text {
                         text: "󰒮"
                         font.family: "JetBrainsMono Nerd Font"
-                        font.pixelSize: 18
+                        font.pixelSize: ThemeFont.lg
                         color: parent.enabled ? "#cdd6f4" : "#45475a"
                     }
 
@@ -102,7 +102,7 @@ Rectangle {
                     contentItem: Text {
                         text: (root.activePlayer && root.activePlayer.isPlaying) ? "󰏤" : "󰐊"
                         font.family: "JetBrainsMono Nerd Font"
-                        font.pixelSize: 22
+                        font.pixelSize: ThemeFont.lg
                         color: parent.enabled ? "#89b4fa" : "#45475a"
                     }
 
@@ -117,7 +117,7 @@ Rectangle {
                     contentItem: Text {
                         text: "󰒝"
                         font.family: "JetBrainsMono Nerd Font"
-                        font.pixelSize: 18
+                        font.pixelSize: ThemeFont.lg
                         color: parent.enabled ? "#cdd6f4" : "#45475a"
                     }
 

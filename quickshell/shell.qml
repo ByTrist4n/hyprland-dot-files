@@ -22,15 +22,24 @@ ShellRoot {
             right: true
         }
 
+        margins {
+            top: 8
+            left: 12
+            right: 12
+        }
+
         Rectangle {
             id: barContainer
 
-            anchors.left: parent.left
-            anchors.right: parent.right
-            anchors.margins: 8
+            Component.onCompleted: {
+                console.log("barRow implicitHeight:", barRow.implicitHeight);
+            }
+            anchors.fill: parent
             implicitHeight: barRow.implicitHeight + 16
             color: Color.bgBase
-            radius: 8
+            radius: 16
+            border.width: 1
+            border.color: Color.borderBase
 
             RowLayout {
                 id: barRow
