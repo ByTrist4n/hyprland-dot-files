@@ -14,9 +14,9 @@ Rectangle {
 
     implicitWidth: musicRow.implicitWidth + 16
     implicitHeight: musicRow.implicitHeight + 16
-    color: Color.bgSurface
+    color: ThemeColor.bgSurface
     radius: 8
-    border.color: Color.borderBase
+    border.color: ThemeColor.borderBase
     border.width: 1
 
     RowLayout {
@@ -28,7 +28,7 @@ Rectangle {
         // Track Title
         Text {
             text: root.activePlayer && root.activePlayer.trackTitle ? root.activePlayer.trackTitle : "No media playing"
-            color: Color.fgPrimary
+            color: ThemeColor.fgPrimary
             font.pixelSize: ThemeFont.sm
             font.bold: true
             elide: Text.ElideRight
@@ -37,7 +37,7 @@ Rectangle {
         // Artist Name
         Text {
             text: "- " + (root.activePlayer && root.activePlayer.trackArtist ? root.activePlayer.trackArtist : "Unknown artist")
-            color: Color.fgMuted
+            color: ThemeColor.fgMuted
             font.pixelSize: ThemeFont.xs
             elide: Text.ElideRight
         }

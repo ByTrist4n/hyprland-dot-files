@@ -15,9 +15,9 @@ Item {
     Rectangle {
         anchors.fill: parent
         radius: 12
-        color: Color.bgBase
+        color: ThemeColor.bgBase
         border.width: 1
-        border.color: Color.borderBase
+        border.color: ThemeColor.borderBase
 
         ColumnLayout {
             id: content
@@ -44,12 +44,12 @@ Item {
                     Layout.preferredHeight: 38
                     Layout.alignment: Qt.AlignTop
                     radius: 10
-                    color: Color.fgPrimary
+                    color: ThemeColor.fgPrimary
 
                     Text {
                         anchors.centerIn: parent
                         text: root.notification.appName ? root.notification.appName.charAt(0).toUpperCase() : "!"
-                        color: Color.fgOnAccent
+                        color: ThemeColor.fgOnAccent
                         font.pixelSize: ThemeFont.md
                         font.bold: true
                     }
@@ -63,7 +63,7 @@ Item {
                     Text {
                         Layout.fillWidth: true
                         text: root.notification.summary || "Notification"
-                        color: Color.accentPrimary
+                        color: ThemeColor.accentPrimary
                         font.pixelSize: ThemeFont.sm
                         font.bold: true
                         maximumLineCount: 2
@@ -74,7 +74,7 @@ Item {
                     Text {
                         Layout.fillWidth: true
                         text: root.notification.body || ""
-                        color: Color.fgPrimary
+                        color: ThemeColor.fgPrimary
                         font.pixelSize: ThemeFont.sm
                         wrapMode: Text.Wrap
                         maximumLineCount: 4
@@ -84,7 +84,7 @@ Item {
                     Text {
                         Layout.fillWidth: true
                         text: root.notification.appName || ""
-                        color: Color.fgPrimary
+                        color: ThemeColor.fgPrimary
                         font.pixelSize: ThemeFont.xs
                         maximumLineCount: 1
                         elide: Text.ElideRight
@@ -97,12 +97,12 @@ Item {
                     Layout.preferredHeight: 28
                     Layout.alignment: Qt.AlignTop
                     radius: 8
-                    color: deleteMouse.containsMouse ? Color.bgSurfaceHover : "transparent"
+                    color: deleteMouse.containsMouse ? ThemeColor.bgSurfaceHover : "transparent"
 
                     Text {
                         anchors.centerIn: parent
                         text: "×"
-                        color: Color.fgPrimary
+                        color: ThemeColor.fgPrimary
                         font.pixelSize: ThemeFont.lg
                     }
 
@@ -135,12 +135,12 @@ Item {
                         Layout.preferredHeight: 30
                         Layout.fillWidth: true
                         radius: 8
-                        color: actionMouse.containsMouse ? Color.bgSurfaceHover : Color.bgSurface
+                        color: actionMouse.containsMouse ? ThemeColor.bgSurfaceHover : ThemeColor.bgSurface
 
                         Text {
                             anchors.centerIn: parent
                             text: modelData.text || modelData.label || modelData.id || "Action"
-                            color: Color.fgPrimary
+                            color: ThemeColor.fgPrimary
                             font.pixelSize: ThemeFont.xs
                             elide: Text.ElideRight
                         }

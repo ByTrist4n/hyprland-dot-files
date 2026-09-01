@@ -55,9 +55,9 @@ Rectangle {
 
     implicitWidth: wsRow.implicitWidth + 16
     implicitHeight: wsRow.implicitHeight + 16
-    color: Color.bgSurface
+    color: ThemeColor.bgSurface
     radius: 8
-    border.color: Color.borderBase
+    border.color: ThemeColor.borderBase
     border.width: 1
 
     RowLayout {
@@ -126,7 +126,7 @@ Rectangle {
                     implicitWidth: wsContentLayout.implicitWidth + 12
                     implicitHeight: 22
                     radius: 4
-                    color: isActive ? Color.bgSurfaceActive : "transparent"
+                    color: isActive ? ThemeColor.bgSurfaceActive : "transparent"
 
                     RowLayout {
                         id: wsContentLayout
@@ -136,7 +136,7 @@ Rectangle {
 
                         Text {
                             text: wsDelegate.wsInfo.name
-                            color: wsDelegate.isActive ? Color.accentPrimary : Color.fgPrimary
+                            color: wsDelegate.isActive ? ThemeColor.accentPrimary : ThemeColor.fgPrimary
                             font.pixelSize: ThemeFont.sm
                             font.bold: wsDelegate.isActive
                             Layout.alignment: Qt.AlignVCenter
@@ -155,7 +155,7 @@ Rectangle {
                                     required property var modelData
 
                                     text: root.getWindowIcon(modelData)
-                                    color: wsDelegate.isActive ? Color.accentPrimary : Color.fgPrimary
+                                    color: wsDelegate.isActive ? ThemeColor.accentPrimary : ThemeColor.fgPrimary
                                     font.pixelSize: ThemeFont.md
                                 }
 

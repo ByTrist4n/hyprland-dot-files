@@ -43,9 +43,9 @@ Scope {
             Rectangle {
                 anchors.fill: parent
                 radius: 12
-                color: Color.bgBase
+                color: ThemeColor.bgBase
                 border.width: 1
-                border.color: Color.borderBase
+                border.color: ThemeColor.borderBase
 
                 ColumnLayout {
                     id: centerColumn
@@ -70,7 +70,7 @@ Scope {
                             Text {
                                 Layout.fillWidth: true
                                 text: "Notifications"
-                                color: Color.fgPrimary
+                                color: ThemeColor.fgPrimary
                                 font.pixelSize: ThemeFont.lg
                                 font.bold: true
                             }
@@ -78,7 +78,7 @@ Scope {
                             Text {
                                 visible: manager.notifications.length > 0
                                 text: manager.notifications.length
-                                color: Color.fgPrimary
+                                color: ThemeColor.fgPrimary
                                 font.pixelSize: ThemeFont.sm
                             }
 
@@ -86,12 +86,12 @@ Scope {
                                 width: 28
                                 height: 28
                                 radius: 8
-                                color: clearMouse.containsMouse ? Color.bgSurfaceHover : "transparent"
+                                color: clearMouse.containsMouse ? ThemeColor.bgSurfaceHover : "transparent"
 
                                 Text {
                                     anchors.centerIn: parent
                                     text: "󰃢"
-                                    color: Color.fgPrimary
+                                    color: ThemeColor.fgPrimary
                                     font.pixelSize: ThemeFont.lg
                                 }
 
@@ -114,7 +114,7 @@ Scope {
                     Rectangle {
                         Layout.fillWidth: true
                         Layout.preferredHeight: 1
-                        color: Color.borderBase
+                        color: ThemeColor.borderBase
                     }
 
                     Item {
@@ -125,7 +125,7 @@ Scope {
                         Text {
                             anchors.centerIn: parent
                             text: "Aucune notification"
-                            color: Color.fgMuted
+                            color: ThemeColor.fgMuted
                             font.pixelSize: ThemeFont.sm
                         }
 

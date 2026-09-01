@@ -33,10 +33,10 @@ ShellRoot {
 
             anchors.fill: parent
             implicitHeight: barRow.implicitHeight + 16
-            color: Color.bgBase
+            color: ThemeColor.bgBase
             radius: 16
             border.width: 1
-            border.color: Color.borderBase
+            border.color: ThemeColor.borderBase
 
             RowLayout {
                 id: barRow

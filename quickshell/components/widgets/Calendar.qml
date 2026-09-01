@@ -27,8 +27,8 @@ PopupWindow {
 
         implicitWidth: mainLayout.implicitWidth + 24
         implicitHeight: mainLayout.implicitHeight + 24
-        color: Color.bgBase
-        border.color: Color.borderBase
+        color: ThemeColor.bgBase
+        border.color: ThemeColor.borderBase
         border.width: 1
         radius: 8
 
@@ -42,7 +42,7 @@ PopupWindow {
             Text {
                 Layout.alignment: Qt.AlignHCenter
                 text: Qt.formatDateTime(new Date(), "MMMM yyyy")
-                color: Color.fgPrimary
+                color: ThemeColor.fgPrimary
                 font.bold: true
             }
 
@@ -71,12 +71,12 @@ PopupWindow {
                         width: 24
                         height: 24
                         radius: 4
-                        color: modelData === new Date().getDate() ? Color.urgent : "transparent"
+                        color: modelData === new Date().getDate() ? ThemeColor.urgent : "transparent"
 
                         Text {
                             anchors.centerIn: parent
                             text: modelData
-                            color: modelData === new Date().getDate() ? Color.fgOnAccent : Color.fgPrimary
+                            color: modelData === new Date().getDate() ? ThemeColor.fgOnAccent : ThemeColor.fgPrimary
                             font.bold: modelData === new Date().getDate()
                         }
 

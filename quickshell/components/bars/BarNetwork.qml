@@ -10,9 +10,9 @@ Rectangle {
     implicitWidth: networkRow.implicitWidth + 24
     implicitHeight: networkRow.implicitHeight + 16
     radius: 10
-    color: networkMouseArea.containsMouse ? Color.bgSurfaceHover : Color.bgSurface
+    color: networkMouseArea.containsMouse ? ThemeColor.bgSurfaceHover : ThemeColor.bgSurface
     border.width: 1
-    border.color: Color.borderBase
+    border.color: ThemeColor.borderBase
 
     RowLayout {
         id: networkRow
@@ -22,13 +22,13 @@ Rectangle {
 
         Text {
             text: networkPopup.wifiDevice && networkPopup.wifiDevice.connected ? "󰖩" : "󱚵"
-            color: Color.accentPrimary
+            color: ThemeColor.accentPrimary
             font.pixelSize: ThemeFont.lg
         }
 
         Text {
             text: networkPopup.bluetoothAdapter && networkPopup.bluetoothAdapter.enabled ? "󰂯" : "󰂲"
-            color: networkPopup.bluetoothAdapter && networkPopup.bluetoothAdapter.enabled ? Color.accentSecondary : Color.fgMuted
+            color: networkPopup.bluetoothAdapter && networkPopup.bluetoothAdapter.enabled ? ThemeColor.accentSecondary : ThemeColor.fgMuted
             font.pixelSize: ThemeFont.lg
         }
 

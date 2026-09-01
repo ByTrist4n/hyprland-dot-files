@@ -66,9 +66,9 @@ PanelWindow {
         width: 360
         height: content.implicitHeight + 28
         radius: 12
-        color: Color.bgBase
+        color: ThemeColor.bgBase
         border.width: 1
-        border.color: Color.borderBase
+        border.color: ThemeColor.borderBase
 
         anchors {
             top: parent.top
@@ -89,7 +89,7 @@ PanelWindow {
 
                 Text {
                     text: "Network"
-                    color: Color.fgPrimary
+                    color: ThemeColor.fgPrimary
                     font.pixelSize: ThemeFont.lg
                     font.bold: true
                     Layout.fillWidth: true
@@ -99,12 +99,12 @@ PanelWindow {
                     width: 30
                     height: 30
                     radius: 8
-                    color: closeMouse.containsMouse ? Color.bgSurfaceHover : "transparent"
+                    color: closeMouse.containsMouse ? ThemeColor.bgSurfaceHover : "transparent"
 
                     Text {
                         anchors.centerIn: parent
                         text: "×"
-                        color: Color.fgMuted
+                        color: ThemeColor.fgMuted
                         font.pixelSize: ThemeFont.lg
                     }
 
@@ -126,12 +126,12 @@ PanelWindow {
             Rectangle {
                 Layout.fillWidth: true
                 height: 1
-                color: Color.borderBase
+                color: ThemeColor.borderBase
             }
 
             Text {
                 text: "Wi-Fi"
-                color: Color.accentPrimary
+                color: ThemeColor.accentPrimary
                 font.pixelSize: ThemeFont.sm
                 font.bold: true
             }
@@ -139,7 +139,7 @@ PanelWindow {
             Text {
                 visible: root.wifiDevice === null
                 text: "No Wi-Fi adapter"
-                color: Color.fgMuted
+                color: ThemeColor.fgMuted
                 font.pixelSize: ThemeFont.xs
             }
 
@@ -160,7 +160,7 @@ PanelWindow {
                     width: wifiList.width
                     height: visible ? 46 : 0
                     radius: 8
-                    color: modelData.connected ? Color.bgSurfaceActive : wifiMouse.containsMouse ? Color.bgSurfaceHover : Color.bgBase
+                    color: modelData.connected ? ThemeColor.bgSurfaceActive : wifiMouse.containsMouse ? ThemeColor.bgSurfaceHover : ThemeColor.bgBase
 
                     RowLayout {
                         anchors.fill: parent
@@ -170,13 +170,13 @@ PanelWindow {
 
                         Text {
                             text: modelData.connected ? "󰖩" : "󱚵"
-                            color: modelData.connected ? Color.accentPrimary : Color.fgMuted
+                            color: modelData.connected ? ThemeColor.accentPrimary : ThemeColor.fgMuted
                             font.pixelSize: ThemeFont.lg
                         }
 
                         Text {
                             text: modelData.name
-                            color: Color.fgPrimary
+                            color: ThemeColor.fgPrimary
                             font.pixelSize: ThemeFont.sm
                             elide: Text.ElideRight
                             Layout.fillWidth: true
@@ -185,7 +185,7 @@ PanelWindow {
                         Text {
                             visible: modelData.connected
                             text: "✓"
-                            color: Color.success
+                            color: ThemeColor.success
                             font.pixelSize: ThemeFont.sm
                             font.bold: true
                         }
@@ -193,7 +193,7 @@ PanelWindow {
                         Text {
                             visible: modelData.stateChanging
                             text: "…"
-                            color: Color.accentPrimary
+                            color: ThemeColor.accentPrimary
                             font.pixelSize: ThemeFont.md
                         }
 
@@ -222,7 +222,7 @@ PanelWindow {
             Rectangle {
                 Layout.fillWidth: true
                 height: 1
-                color: Color.borderBase
+                color: ThemeColor.borderBase
                 Layout.topMargin: 2
                 Layout.bottomMargin: 2
             }
@@ -232,7 +232,7 @@ PanelWindow {
 
                 Text {
                     text: "Bluetooth"
-                    color: Color.accentSecondary
+                    color: ThemeColor.accentSecondary
                     font.pixelSize: ThemeFont.sm
                     font.bold: true
                     Layout.fillWidth: true
@@ -244,9 +244,9 @@ PanelWindow {
                     width: 42
                     height: 24
                     radius: 12
-                    color: root.bluetoothAdapter && root.bluetoothAdapter.enabled ? Color.accentSecondary : Color.bgSurfaceHover
+                    color: root.bluetoothAdapter && root.bluetoothAdapter.enabled ? ThemeColor.accentSecondary : ThemeColor.bgSurfaceHover
                     border.width: 1
-                    border.color: Color.borderBase
+                    border.color: ThemeColor.borderBase
 
                     Rectangle {
                         width: 18
@@ -254,7 +254,7 @@ PanelWindow {
                         radius: 8
                         anchors.verticalCenter: parent.verticalCenter
                         x: root.bluetoothAdapter && root.bluetoothAdapter.enabled ? parent.width - width - 3 : 3
-                        color: Color.fgPrimary
+                        color: ThemeColor.fgPrimary
 
                         Behavior on x {
                             NumberAnimation {
@@ -307,7 +307,7 @@ PanelWindow {
                     width: bluetoothList.width
                     height: visible ? 46 : 0
                     radius: 8
-                    color: modelData.connected ? Color.bgSurfaceActive : bluetoothMouse.containsMouse ? Color.bgSurfaceHover : Color.bgBase
+                    color: modelData.connected ? ThemeColor.bgSurfaceActive : bluetoothMouse.containsMouse ? ThemeColor.bgSurfaceHover : ThemeColor.bgBase
 
                     Connections {
                         function onConnectedChanged() {
@@ -325,13 +325,13 @@ PanelWindow {
 
                         Text {
                             text: "󰂱"
-                            color: modelData.connected ? Color.accentSecondary : Color.fgMuted
+                            color: modelData.connected ? ThemeColor.accentSecondary : ThemeColor.fgMuted
                             font.pixelSize: ThemeFont.lg
                         }
 
                         Text {
                             text: modelData.name || "Unknown device"
-                            color: Color.fgPrimary
+                            color: ThemeColor.fgPrimary
                             font.pixelSize: ThemeFont.sm
                             elide: Text.ElideRight
                             Layout.fillWidth: true
@@ -339,14 +339,14 @@ PanelWindow {
 
                         Text {
                             text: busy || modelData.connecting ? "Loading…" : ""
-                            color: Color.accentSecondary
+                            color: ThemeColor.accentSecondary
                             font.pixelSize: ThemeFont.md
                         }
 
                         Text {
                             visible: !busy && !modelData.connecting
                             text: modelData.connected ? "✓" : "›"
-                            color: modelData.connected ? Color.success : Color.fgMuted
+                            color: modelData.connected ? ThemeColor.success : ThemeColor.fgMuted
                             font.pixelSize: ThemeFont.md
                             font.bold: true
                         }
@@ -379,7 +379,7 @@ PanelWindow {
             Text {
                 visible: root.bluetoothAdapter !== null && root.bluetoothAdapter.enabled && bluetoothList.count === 0
                 text: "No paired devices"
-                color: Color.fgMuted
+                color: ThemeColor.fgMuted
                 font.pixelSize: ThemeFont.xs
                 Layout.leftMargin: 4
             }
@@ -387,7 +387,7 @@ PanelWindow {
             Rectangle {
                 Layout.fillWidth: true
                 height: 1
-                color: Color.borderBase
+                color: ThemeColor.borderBase
                 Layout.topMargin: 2
                 Layout.bottomMargin: 2
             }
@@ -400,9 +400,9 @@ PanelWindow {
                     Layout.fillWidth: true
                     height: 34
                     radius: 8
-                    color: nmMouse.containsMouse ? Color.bgSurfaceHover : Color.bgBase
+                    color: nmMouse.containsMouse ? ThemeColor.bgSurfaceHover : ThemeColor.bgBase
                     border.width: 1
-                    border.color: Color.borderBase
+                    border.color: ThemeColor.borderBase
 
                     RowLayout {
                         anchors.centerIn: parent
@@ -410,13 +410,13 @@ PanelWindow {
 
                         Text {
                             text: "󰛳"
-                            color: Color.accentPrimary
+                            color: ThemeColor.accentPrimary
                             font.pixelSize: ThemeFont.sm
                         }
 
                         Text {
                             text: "Network settings"
-                            color: Color.fgPrimary
+                            color: ThemeColor.fgPrimary
                             font.pixelSize: ThemeFont.xs
                         }
 
@@ -440,9 +440,9 @@ PanelWindow {
                     Layout.fillWidth: true
                     height: 34
                     radius: 8
-                    color: blueMouse.containsMouse ? Color.bgSurfaceHover : Color.bgBase
+                    color: blueMouse.containsMouse ? ThemeColor.bgSurfaceHover : ThemeColor.bgBase
                     border.width: 1
-                    border.color: Color.borderBase
+                    border.color: ThemeColor.borderBase
 
                     RowLayout {
                         anchors.centerIn: parent
@@ -450,13 +450,13 @@ PanelWindow {
 
                         Text {
                             text: "󰂰"
-                            color: Color.accentSecondary
+                            color: ThemeColor.accentSecondary
                             font.pixelSize: ThemeFont.sm
                         }
 
                         Text {
                             text: "Bluetooth settings"
-                            color: Color.fgPrimary
+                            color: ThemeColor.fgPrimary
                             font.pixelSize: ThemeFont.xs
                         }
 
