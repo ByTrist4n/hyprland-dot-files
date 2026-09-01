@@ -1,5 +1,6 @@
 import "./components/bars"
 import "./components/notifications"
+import "./components/widgets"
 import "./theme"
 import QtQuick
 import QtQuick.Controls
@@ -51,6 +52,12 @@ ShellRoot {
                     Layout.fillWidth: true
                 }
 
+                BarNetwork {
+                    id: barNetwork
+
+                    networkPopup: networkPopup
+                }
+
             }
 
             BarDate {
@@ -95,6 +102,12 @@ ShellRoot {
         id: notificationCenter
 
         manager: notificationManager
+    }
+
+    NetworkPopup {
+        id: networkPopup
+
+        barHeight: barContainer.height
     }
 
 }
