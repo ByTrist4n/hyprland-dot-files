@@ -20,7 +20,6 @@ Here is my dot files configuration for the Hyprland environment 😎
 | 💤 [hypridle](https://github.com/hyprwm/hypridle)                     | Idle management daemon for Hyprland                                                                              |
 | 🔍 [rofi](https://github.com/davatorium/rofi)                         | Window switcher and application launcher                                                                         |
 | 🚪 [wlogout](https://github.com/ArtsyMacaw/wlogout)                   | Wayland-based logout menu                                                                                        |
-| 🔔 [swaync](https://github.com/ErikReider/SwayNotificationCenter)     | Sway Notification Center for Wayland                                                                             |
 | 👀 [atuin](https://atuin.sh/)                                         | shell history with end-to-end encryption                                                                         |
 | 💄 [eza](https://eza.rocks/)                                          | A modern, maintained replacement for ls, written in rust                                                         |
 | 💁 [fastfetch](https://github.com/fastfetch-cli/fastfetch)            | Fastfetch is a neofetch-like tool for fetching system information and displaying it in a visually appealing way. |
